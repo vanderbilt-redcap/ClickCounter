@@ -1,0 +1,74 @@
+{
+	"name": "ClickCounter",
+	"namespace": "Vanderbilt\\ClickCounter",
+	"framework-version": 8,
+	"description": "This REDCap external module was created to invite researchers whose publication was matched by StarBRITE.",
+	"documentation": "README.md",
+	"authors": [
+		{
+			"name": "Carl Reed",
+			"email": "datacore@vumc.org",
+			"institution": "Vanderbilt University Medical Center"
+		}
+	],
+	"permissions": [
+		"redcap_module_configuration_settings"
+	],
+	"enable-every-page-hooks-on-system-pages": false,
+	"links": {
+		"project": [
+			{
+				"name": "ClickCounter Links",
+				"icon": "arrow_right",
+				"url": "links",
+				"show-header-and-footer": true
+			},
+			{
+				"name": "Link Forwarding Page",
+				"icon": "arrow_right",
+				"url": "link?NOAUTH"
+			}
+		]
+	},
+	"no-auth-pages": [
+		"link"
+	],
+	"project-settings": [
+		{
+			"key": "target_links",
+			"name": "Target Links",
+			"required": false,
+			"type": "sub_settings",
+			"repeatable": true,
+			"sub_settings":[
+				{
+					"key": "target_link",
+					"name": "Target Link",
+					"required": false,
+					"type": "text",
+					"repeatable": false
+				},
+				{
+					"key": "counter_field",
+					"name": "Counter Field",
+					"required": false,
+					"type": "field-list",
+					"repeatable": false
+				}
+			]
+		},
+		{
+			"key": "show_error_table_in_links_page",
+			"name": "Show Error Table in Links Page",
+			"required": false,
+			"type": "checkbox"
+		}
+	],
+	"system-settings": [],
+	"compatibility": {
+		"php-version-min": "",
+		"php-version-max": "",
+		"redcap-version-min": "",
+		"redcap-version-max": ""
+	}
+}
