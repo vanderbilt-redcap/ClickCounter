@@ -54,7 +54,6 @@ if (empty($data) or empty($data[0])) {
 	$data = $data[0];
 }
 
-$rid = 9;
 if ($data->$rid_field != $rid) {
 	$module->log("count_error", [
 		"error_message" => "\\REDCap::getData returned data but the $rid_field value did't match.",
