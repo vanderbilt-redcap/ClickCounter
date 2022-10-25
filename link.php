@@ -90,6 +90,9 @@ if (empty(!$save_result['errors'])) {
 	]);
 }
 
+//Replaced piped data
+$target_link = strip_tags(\Piping::replaceVariablesInLabel($target_link,$rid));
+
 // forward user to target link
 header("Location: $target_link");
 exit();
